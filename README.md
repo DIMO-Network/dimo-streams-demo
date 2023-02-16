@@ -2,15 +2,18 @@
 ```
 brew install node && brew install npm
 ```
-1. Checking repository
+
+2. Checking repository
 ```
-git@github.com:zer0stars/dimo-streams-demo.git
+git pull git@github.com:zer0stars/dimo-streams-demo.git
 ```
-2. Run installation
+
+3. Run installation
 ```
 npm i
 ```
-3. Start subscriber
+
+4. Start subscriber
 ```
 node index.js
 ```
