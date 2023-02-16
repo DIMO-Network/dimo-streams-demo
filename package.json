@@ -4,12 +4,12 @@
   "description": "DIMO Example Subscribe to Weather Stream",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsx index.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pretty-print-json": "^1.4.0",
     "streamr-client": "^7.3.0"
   }
 }
