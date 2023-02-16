@@ -1,0 +1,15 @@
+{
+  "name": "dimo-subscribe",
+  "version": "0.0.1",
+  "description": "DIMO Example Subscribe to Weather Stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pretty-print-json": "^1.4.0",
+    "streamr-client": "^7.3.0"
+  }
+}
