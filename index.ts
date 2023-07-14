@@ -1,6 +1,8 @@
 import StreamrClient from "streamr-client";
 import crypto from "crypto";
 
+const streamId = "streams.dimo.eth/firehose/weather";
+
 const main = async () => {
   // Create the client using the validated private key
   const client = new StreamrClient({
@@ -9,13 +11,21 @@ const main = async () => {
     },
   });
 
-  const subscription = await client.subscribe(
-    "streams.dimo.eth/firehose/weather",
-    (message) => {
-      console.log(JSON.stringify(message, undefined, 2));
-    }
+  const stream = await client.getStream(streamId);
+
+  const onMessage = (content) => {
+   console.log(JSON.stringify(content, undefined, 2));
+  };
+  
+  const subscriptions = await Promise.all(
+    stream.getStreamParts().map(async (partition) => {
+      await client.subscribe(
+        partition,
+        onMessage
+      );
+    })
   );
-  return { client, subscription };
+  return { client, subscriptions };
 };
 
 export default main();
