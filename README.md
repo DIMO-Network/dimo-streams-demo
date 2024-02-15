@@ -16,9 +16,7 @@ git clone https://github.com/DIMO-Network/dimo-streams-demo.git
 
 3. Install the dependencies for this application:
 
-::: warning
-The Streamr JavaScript Client uses some npm dependencies that have been deprecated in Node v21, please use a Node version < 21 to ensure a successful installation
-:::
+> The Streamr JavaScript Client uses some npm dependencies that have been deprecated in Node v21, please use a Node version < 21 to ensure a successful installation.
 
 ```
 npm i
