@@ -1,13 +1,12 @@
-import StreamrClient from "streamr-client";
+import StreamrClient from "@streamr/sdk"
 import crypto from "crypto";
-
 const streamId = "streams.dimo.eth/firehose/weather";
 
 const main = async () => {
   // Create the client using the validated private key
   const client = new StreamrClient({
     auth: {
-      privateKey: crypto.randomBytes(32).toString("hex"),
+      privateKey: crypto.randomBytes(32).toString('hex')
     },
   });
 
