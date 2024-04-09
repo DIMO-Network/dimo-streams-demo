@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@streamr/sdk": "^100.0.0"
+    "@streamr/sdk": "^100.2.2",
+    "ethers": "^5.7.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.24"
